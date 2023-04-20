@@ -43,7 +43,7 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
     FSCalendarOrientationPortrait
 };
 
-@interface FSCalendar ()<UICollectionViewDataSource,UICollectionViewDelegate,FSCalendarCollectionViewInternalDelegate,UIGestureRecognizerDelegate>
+@interface FSCalendar ()<FSCalendarCollectionViewInternalDelegate,UIGestureRecognizerDelegate>
 {
     NSMutableArray  *_selectedDates;
 }
