@@ -1608,7 +1608,7 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
     [operations makeObjectsPerformSelector:@selector(start)];
 }
 
-- (void)setSectionInsets:(UIEdgeInsets sectionInsets) {
+- (void)setSectionInsets:(UIEdgeInsets)sectionInsets {
     _sectionInsets = sectionInsets;
     self.collectionViewLayout.sectionInsets = sectionInsets;
 }
