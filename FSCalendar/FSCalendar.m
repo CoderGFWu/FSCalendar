@@ -929,9 +929,8 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
         CGFloat headerHeight = self.preferredHeaderHeight;
         CGFloat weekdayHeight = self.preferredWeekdayHeight;
         CGFloat contentHeight = self.transitionCoordinator.cachedMonthSize.height-headerHeight-weekdayHeight;
-        CGFloat padding = 5;
         if (!self.floatingMode) {
-            _preferredRowHeight = (contentHeight-padding*2)/6.0;
+            _preferredRowHeight = (contentHeight-self.sectionInsets.top-self.sectionInsets.bottom)/6.0;
         } else {
             _preferredRowHeight = _rowHeight;
         }
@@ -1609,6 +1608,10 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
     [operations makeObjectsPerformSelector:@selector(start)];
 }
 
+- (void)setSectionInsets:(UIEdgeInsets sectionInsets) {
+    _sectionInsets = sectionInsets;
+    self.collectionViewLayout.sectionInsets = sectionInsets;
+}
 
 @end
 
