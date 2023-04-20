@@ -408,6 +408,11 @@ IB_DESIGNABLE
 @property (readonly, nonatomic) NSArray<NSDate *> *selectedDates;
 
 /**
+    The sectionInsets of collectionView
+*/
+@property (assign, nonatomic) UIEdgeInsets sectionInsets;
+
+/**
  Reload the dates and appearance of the calendar.
  */
 - (void)reloadData;
