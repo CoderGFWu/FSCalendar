@@ -240,7 +240,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - Primary
 
 IB_DESIGNABLE
-@interface FSCalendar : UIView
+@interface FSCalendar : UIView<UICollectionViewDataSource,UICollectionViewDelegate>
 
 /**
  * The timezone of the calendar. `defaultTimeZone` by default.
