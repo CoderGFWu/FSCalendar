@@ -1403,6 +1403,7 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
     cell.dateIsToday = self.today?[self.gregorian isDate:date inSameDayAsDate:self.today]:NO;
     cell.weekend = [self.gregorian isDateInWeekend:date];
     cell.monthPosition = [self.calculator monthPositionForIndexPath:indexPath];
+    cell.needOverrideTodayTitleColor = self.appearance.needOverrideTodayTitleColor;
     switch (self.transitionCoordinator.representingScope) {
         case FSCalendarScopeMonth: {
             cell.placeholder = (cell.monthPosition == FSCalendarMonthPositionPrevious || cell.monthPosition == FSCalendarMonthPositionNext) || ![self isDateInRange:date];
