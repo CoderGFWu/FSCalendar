@@ -260,7 +260,7 @@
         }
         return dictionary[@(FSCalendarCellStateSelected)];
     }
-    if (self.dateIsToday && [[dictionary allKeys] containsObject:@(FSCalendarCellStateToday)] && !self.needOverrideTodayTitleColor) {
+    if (self.dateIsToday && [[dictionary allKeys] containsObject:@(FSCalendarCellStateToday)] && self.monthPosition == FSCalendarMonthPositionCurrent) {
         return dictionary[@(FSCalendarCellStateToday)];
     }
     if (self.placeholder && [[dictionary allKeys] containsObject:@(FSCalendarCellStatePlaceholder)]) {
