@@ -221,6 +221,7 @@ typedef NS_OPTIONS(NSUInteger, FSCalendarCaseOptions) {
  *
  */
 @property (assign, nonatomic) FSCalendarSeparators separators;
+@property (assign, nonatomic) BOOL needOverrideTodayTitleColor;
 
 #if TARGET_INTERFACE_BUILDER
 
